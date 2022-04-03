@@ -5,6 +5,7 @@ pipeline {
             agent {
                 docker {
                     image 'cimg/base:stable'
+                    args '-u root'
                 }
             }
             steps {
