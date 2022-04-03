@@ -1,12 +1,18 @@
 pipeline {
     agent none
-    node{
     stages {
-        stage('Heroku') {
+        stage('Build') {
+            agent {
+                docker {
+                    image 'python:3-alpine'
+                }
+            }
             steps {
-                sh 'heroku'
+                sh '''
+                    curl https://cli-assets.heroku.com/install.sh | sh;
+                    heroku
+                '''
             }
         }
-    }
     }
 }
