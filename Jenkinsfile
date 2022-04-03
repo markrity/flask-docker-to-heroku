@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             agent {
                 docker {
-                    image 'curl:latest'
+                    image 'curlimages/curl:latest'
                 }
             }
             steps {
