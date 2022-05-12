@@ -1,23 +1,17 @@
 # flask-docker-to-heroku
 
-
-`heroku login`
-
-`docker login --username=<username> --password=<password>`
-`heroku container:login` 
-
-`heroku create <app-name>`
-
-`heroku git:remote -a <app-name>`
-
-
-`heroku container:push web --app <app-name>`
-`heroku container:release web --app <app-name>`
-
-
-
 ```
+heroku login
 
-heroku authorizations:create
+heroku create sce-flask-template
 
+heroku container:login
+
+heroku container:push web --app sce-flask-template
+
+heroku container:release web --app sce-flask-template
+
+heroku logs --tail --app sce-flask-template
+
+https://sce-flask-template.herokuapp.com/
 ```
