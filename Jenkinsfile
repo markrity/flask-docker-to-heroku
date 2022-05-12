@@ -11,7 +11,7 @@ pipeline {
             steps {
                 sh '''
                     curl https://cli-assets.heroku.com/install.sh | sh;
-                    heroku
+                    heroku auth:token 
                 '''
             }
         }
