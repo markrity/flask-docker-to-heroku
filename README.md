@@ -1,5 +1,16 @@
 # flask-docker-to-heroku
 
+
+### Running locally
+```
+docker build -t sce-flask-template .
+docker run -p PORT_ON_MACHINE:PORT_IN_CONTAINER IMAGE_TAG
+docker run -p 8080:5000 sce-flask-template
+```
+
+
+### Deploying to Heroku
+
 ```
 heroku login
 
