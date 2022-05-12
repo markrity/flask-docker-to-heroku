@@ -1,7 +1,7 @@
 pipeline {
     agent none
     stages {
-        stage('Build') {
+        stage('Deploy to Heroku') {
             agent {
                 docker {
                     image 'cimg/base:stable'
