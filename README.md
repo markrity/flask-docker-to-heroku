@@ -13,3 +13,11 @@
 
 `heroku container:push web --app <app-name>`
 `heroku container:release web --app <app-name>`
+
+
+
+```
+
+heroku authorizations:create
+
+```
