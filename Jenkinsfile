@@ -11,7 +11,8 @@ pipeline {
             steps {
                 sh '''
                     curl https://cli-assets.heroku.com/install.sh | sh;
-                    heroku auth:token 
+                    heroku container:push web --app sce-flask-template
+                    heroku container:release web --app sce-flask-template
                 '''
             }
         }
