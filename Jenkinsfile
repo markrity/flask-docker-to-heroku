@@ -2,11 +2,23 @@ pipeline {
     agent none
     stages {
         stage('Build') {
+            agent {
+                docker {
+                    image 'cimg/base:stable'
+                    args '-u root'
+                }
+            }
             steps {
-                 sh 'echo "Build"'
+                sh 'echo "Build"'
             }
         }
         stage('Test') {
+            agent {
+                docker {
+                    image 'cimg/base:stable'
+                    args '-u root'
+                }
+            }
             steps {
                 sh 'echo "Tests"'
             }
