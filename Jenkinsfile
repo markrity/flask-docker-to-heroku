@@ -1,6 +1,16 @@
 pipeline {
     agent none
     stages {
+        stage('Build') {
+            steps {
+                 sh 'echo "Build"'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'echo "Tests"'
+            }
+        }
         stage('Deploy to Heroku') {
             agent {
                 docker {
